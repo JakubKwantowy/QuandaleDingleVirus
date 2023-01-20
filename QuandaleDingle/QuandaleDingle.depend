@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1667743479 source:y:\quandaledinglevirus\quandaledingle\cursorlib.cpp
+	"cursorlib.h"
+	<windows.h>
+	<string>
+
+1667694459 y:\quandaledinglevirus\quandaledingle\cursorlib.h
+	<windows.h>
+
+1672430908 source:y:\quandaledinglevirus\quandaledingle\quandale.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<ios>
+	<windows.h>
+	<sstream>
+	"cursorlib.h"
+	"quandale.h"
+
+1673026390 y:\quandaledinglevirus\quandaledingle\quandale.h
+	<iostream>
+	<windows.h>
+	<sstream>
+

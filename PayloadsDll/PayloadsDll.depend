@@ -1,8 +1,11 @@
 # depslib dependency file v1.0
-1673299446 source:y:\quandaledinglevirus\payloadsdll\payloads.cpp
+1674291088 source:y:\quandaledinglevirus\payloadsdll\payloads.cpp
 	<iostream>
 	<time.h>
+	<Windows.h>
+	<wingdi.h>
+	<fstream>
 	"payloads.h"
 
-1673299443 y:\quandaledinglevirus\payloadsdll\payloads.h
+1674242530 y:\quandaledinglevirus\payloadsdll\payloads.h
 

@@ -28,7 +28,7 @@
 				<Linker>
 					<Add option="-s" />
 					<Add library="C:\Program Files\CodeBlocks\MinGW\lib\libgdi32.a" />
-					<Add library="libPayloadsDll.a" />
+					<Add library="Y:\QuandaleDingleVirus\Stage2\libPayloadsDll.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -36,7 +36,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="PayloadsDll.dll" />
 		<Unit filename="payloads.h" />
 		<Unit filename="stage2.cpp" />
 		<Extensions>

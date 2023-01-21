@@ -5,21 +5,17 @@
 
 int main(){
     //FreeConsole();
-
     /*MessageBox(
         NULL,
         (LPCSTR)"Text",
         (LPCSTR)"Caption",
         MB_OK | MB_ICONINFORMATION
     );*/
-
     //HWND hWnd = GetDesktopWindow();
     //HDC hdc = GetWindowDC(hWnd);
-
     /*while(1){
         DrawIcon(hdc, 0, 0, LoadIcon(NULL, IDI_ERROR));
     }*/
-
     /*HBRUSH brush = CreateSolidBrush(RGB(0,0,0));
     RECT res;
     GetWindowRect(hWnd, &res);
@@ -35,7 +31,27 @@ int main(){
         Sleep(1000/60);
     }*/
 
-    std::cout << payloadLib::payloadClass::generatePayload();
+    payloadLib::payloadClass::payload3();
+    /*switch(payloadLib::payloadClass::generatePayload()){
+    case 0:
+        payloadLib::payloadClass::payload0();
+        break;
+    case 1:
+        payloadLib::payloadClass::payload1();
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    case 6:
+        break;
+    case 7:
+        break;
+    }*/
 
     return 0;
 }

@@ -30,13 +30,14 @@
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
+					<Add option="-O2" />
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
-					<Add option="-O2" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add library="user32" />
+					<Add library="C:\Program Files\CodeBlocks\MinGW\lib\libgdi32.a" />
 				</Linker>
 			</Target>
 		</Build>

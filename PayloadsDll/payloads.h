@@ -15,7 +15,6 @@ namespace payloadLib{
         static __declspec(dllexport) void payload7();
 
         static __declspec(dllexport) int generatePayload();
-        static __declspec(dllexport) void execPayload(int payloadId);
     };
 }
 

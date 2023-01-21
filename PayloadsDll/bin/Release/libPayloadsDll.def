@@ -1,2 +1,6 @@
 EXPORTS
     _ZN10payloadLib12payloadClass15generatePayloadEv @1
+    _ZN10payloadLib12payloadClass8payload0Ev @2
+    _ZN10payloadLib12payloadClass8payload1Ev @3
+    _ZN10payloadLib12payloadClass8payload2Ev @4
+    _ZN10payloadLib12payloadClass8payload3Ev @5

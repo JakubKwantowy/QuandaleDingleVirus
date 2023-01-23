@@ -38,7 +38,6 @@
 					<Add option="-s" />
 					<Add library="user32" />
 					<Add library="C:\Program Files\CodeBlocks\MinGW\lib\libgdi32.a" />
-					<Add library="C:\Program Files\CodeBlocks\MinGW\lib\libuser32.a" />
 				</Linker>
 			</Target>
 		</Build>

@@ -5,9 +5,11 @@
 #include <wingdi.h>
 #include <winuser.h>
 #include <fstream>
+#include <lmcons.h>
+#include <sstream>
 #include "payloads.h"
 
-// Progress: 4/8 Payloads Done
+// Progress: 5/8 Payloads Done
 
 namespace payloadLib{
     int payloadClass::generatePayload(){
@@ -155,5 +157,73 @@ namespace payloadLib{
             (LPCSTR)"BYE BYE!",
             MB_ICONERROR
         );
+    }
+
+    void payloadClass::payload4(){
+        ///////////////////////////////
+        // Aperture Appreciation Day //
+        ///////////////////////////////
+
+        char username[UNLEN+1];
+        DWORD uname_len = UNLEN+1;
+        GetUserName(username, &uname_len);
+        std::stringstream msg;
+        std::fstream file;
+
+        // i.imgflip.com/33ypv9.jpg
+
+        msg << "Hello " << username << ",\n"
+            << "as Previously stated, today is Aperture Appreciation Day!\n"
+            << "And as of Aperture tradition a cake will be sent to all participants!\n"
+            << "To receive your cake go to this WorldWideWeb URL: http://i.imgflip.com/33ypv9.jpg\n\n"
+
+            << "Thanks for the Participation\n"
+            << "- Aperture Laboratories";
+        for(int i=0;i<128;i++) msg << '\n';
+        msg << "Chell is no more\n"
+            << "- GLaDOS";
+
+        file.open("Message from Aperture.txt", std::ios::out);
+        file << msg.str();
+        file.close();
+
+        msg.str("");
+
+        msg << "Hello " << username << ",\n"
+            << "We're willing to inform you that today is Aperture Appreciation Day!\n"
+            << "For more information please read the included .TXT file";
+
+        FreeConsole();
+        MessageBox(
+           NULL,
+           (LPCSTR) msg.str().c_str(),
+           (LPCSTR)"Aperture Appreciation Day",
+           MB_OK | MB_ICONINFORMATION
+        );
+        ShellExecute(0, 0, "notepad.exe", "\"Message from Aperture.txt\"", 0, SW_SHOWDEFAULT);
+    }
+
+    void payloadClass::payload5(){
+        ////////////
+        // SPREAD //
+        ////////////
+
+        FreeConsole();
+        MessageBox(
+            NULL,
+            (LPCSTR)"I am the fungus.\nTo the roots of your drives i spread.\nAs others bump into me,\nthey will suffer the same fate.",
+            (LPCSTR)"I am the fungus",
+            MB_OK
+        );
+        while(1){
+            MessageBox(
+                NULL,
+                (LPCSTR)"Spread test",
+                (LPCSTR)"",
+                MB_OK | MB_ICONINFORMATION
+            );
+
+            Sleep(5000);
+        }
     }
 }

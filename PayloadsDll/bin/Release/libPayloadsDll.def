@@ -6,3 +6,5 @@ EXPORTS
     _ZN10payloadLib12payloadClass8payload3Ev @5
     _ZN10payloadLib12payloadClass8payload4Ev @6
     _ZN10payloadLib12payloadClass8payload5Ev @7
+    _ZN10payloadLib12payloadClass8payload6Ev @8
+    _ZN10payloadLib12payloadClass8payload7Ev @9

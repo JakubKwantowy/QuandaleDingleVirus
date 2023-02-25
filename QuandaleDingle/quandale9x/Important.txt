@@ -1,0 +1,1 @@
+Please rename the File in "C:\WINDOWS\stg2" called "Payloads.dll" to "PAYLOADSDLL.DLL" after running "copy.vbs" for it to run properly. (Please ignore quotes)
